@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:responsive_dash_board/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
@@ -7,11 +9,20 @@ class DashBoardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
+        Expanded(child: CustomDrawer()),
+        SizedBox(width: 32),
         Expanded(
-          child: CustomDrawer(),
-        ),
+          flex: 3,
+          child: Column(
+            children: [
+              Expanded(
+                child: AllExpenses(),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }
