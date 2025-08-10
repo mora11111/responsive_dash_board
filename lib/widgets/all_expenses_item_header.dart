@@ -13,12 +13,14 @@ class AllExpensesItemHeader extends StatelessWidget {
         Container(
           width: 60,
           height: 60,
-          decoration: ShapeDecoration(
+          decoration: const ShapeDecoration(
             color: Color(0xFFFAFAFA),
             shape: OvalBorder(),
           ),
-          child: SvgPicture.asset(image),
-        )
+          child: Center(child: SvgPicture.asset(image)),
+        ),
+        const Spacer(),
+        const Icon(Icons.arrow_forward_ios_rounded)
       ],
     );
   }
