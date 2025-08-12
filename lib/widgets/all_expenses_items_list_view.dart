@@ -37,7 +37,9 @@ class AllExpensesItemsListView extends StatelessWidget {
                   padding: index == 1
                       ? const EdgeInsets.symmetric(horizontal: 12.0)
                       : EdgeInsets.zero,
-                  child: AllExpensesItem(itemModel: items[index]),
+                  child: AllExpensesItem(
+                      isSelected: false,
+                      itemModel: items[index]),
                 ))),
       ],
     );
