@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:responsive_dash_board/widgets/custom_button.dart';
 import 'package:responsive_dash_board/widgets/title_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
@@ -23,7 +22,9 @@ class QuickInvoiceForm extends StatelessWidget {
                     title: 'Customer Email', hint: 'Type customer email')),
           ],
         ),
-        SizedBox(height: 24,),
+        SizedBox(
+          height: 24,
+        ),
         Row(
           children: [
             Expanded(
@@ -32,9 +33,26 @@ class QuickInvoiceForm extends StatelessWidget {
             SizedBox(
               width: 16,
             ),
+            Expanded(child: TitleTextField(title: 'Item Mount', hint: 'USD')),
+          ],
+        ),
+        SizedBox(
+          height: 24,
+        ),
+        Row(
+          children: [
             Expanded(
-                child: TitleTextField(
-                    title: 'Item Mount', hint: 'USD')),
+                child: CustomButton(
+              text: 'Add more details',
+              backgroundColor: Colors.white,
+              textColor: Color(0xff4EB7F2),
+            )),
+            SizedBox(
+              width: 24,
+            ),
+            Expanded(
+              child: CustomButton(),
+            ),
           ],
         ),
       ],
