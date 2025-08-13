@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
-import 'package:responsive_dash_board/widgets/latest_transaction_list_view.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
@@ -24,7 +23,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
                 height: 24,
               ),
               QuickInvoice(),
-              LatestTransactionListView(),
+
             ],
           ),
         )
