@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:responsive_dash_board/widgets/income_chart.dart';
 import 'package:responsive_dash_board/widgets/income_secton_header.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -9,8 +12,17 @@ class IncomeSection extends StatelessWidget {
     return const Column(
       children: [
         IncomeSectionHeader(),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(child: IncomeChart()),
+            ],
+          ),
+        )
       ],
     );
   }
 }
+
+
 
