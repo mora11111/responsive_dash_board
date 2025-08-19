@@ -15,7 +15,7 @@ class _IncomeChartState extends State<IncomeChart> {
   Widget build(BuildContext context) {
     return AspectRatio(
         aspectRatio: 1,
-        child: Container(child: PieChart(getChartData())));
+        child: PieChart(getChartData()));
   }
 
   PieChartData getChartData() {
