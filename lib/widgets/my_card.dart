@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
@@ -50,8 +51,10 @@ class MyCard extends StatelessWidget {
                 style: AppStyles.styleRegular16(context)
                     .copyWith(color: Colors.white),
               ),
-              const SizedBox(
-                height: 54 - 28,
+              const Flexible(
+                child: SizedBox(
+                  height: 54 - 28,
+                ),
               ),
             ],
           ),
