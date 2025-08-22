@@ -37,23 +37,35 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ...List.generate(
-            items.length,
-            (index) => Expanded(
-              child: GestureDetector(
-                onTap: (){
-                  updateIndex(index);
-                },
-                child: Padding(
-                    padding: index == 1
-                        ? const EdgeInsets.symmetric(horizontal: 12.0)
-                        : EdgeInsets.zero,
-                    child: AllExpensesItem(
-                        isSelected: selectedIndex == index,
-                        itemModel: items[index]),
-                  ),
-              ),
-            )),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(0),
+            child: AllExpensesItem(
+              isSelected: selectedIndex == 0,
+              itemModel: items[0],
+            ),
+          ),
+        ),
+        const SizedBox(width: 12), // Replace padding with SizedBox
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(1),
+            child: AllExpensesItem(
+              isSelected: selectedIndex == 1,
+              itemModel: items[1],
+            ),
+          ),
+        ),
+        const SizedBox(width: 12), // Add another SizedBox if needed
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(2),
+            child: AllExpensesItem(
+              isSelected: selectedIndex == 2,
+              itemModel: items[2],
+            ),
+          ),
+        ),
       ],
     );
   }
